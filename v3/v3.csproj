@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D688EBDE-77CC-4EE1-B8A3-29F144F91F58}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>v3</RootNamespace>
+    <AssemblyName>v3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachedProd.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttachedProduct.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentByService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dv3_403DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dv3_403DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPhoto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SaleProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\SaleProduct.Designer.cs">
+      <DependentUpon>SaleProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicePhoto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SaleProduct.resx">
+      <DependentUpon>SaleProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="bin\Debug\Товарыавтосервиса\products_a_import.zip" />
+    <None Include="dv3_403DataSet.xsc">
+      <DependentUpon>dv3_403DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dv3_403DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dv3_403DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dv3_403DataSet.xss">
+      <DependentUpon>dv3_403DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Товарыавтосервиса\products_a_import.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Товарыавтосервиса\0070C563.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\022096CB.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\03D096CB.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\0D30C4EE.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\0D60A8A4.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\0DF0A8A4.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\21B0E533.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\23106A35.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2390848B.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\23F0848B.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\27B0C883.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2A109062.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2B009062.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2B609062.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2D709062.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2E00E06C.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2E30E06C.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\2E60E06C.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\30E0C751.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\3760D73F.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\3970E753.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\39A0C188.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\39D0C188.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\3B70C57C.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\3DA0B713.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\3DF0E4BC.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\40409946.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\43909176.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\43C09176.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\43E08C52.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\45008C52.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\45908C52.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\47E07CB5.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\5180B90E.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\5250C855.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\54B0795D.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\59B0BE73.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\5A30A7EE.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\5BB0C351.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\5BE0C351.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6080DCD5.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\63C09E91.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6730A31C.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6800BB8A.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\69C0CD62.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6CA0BE73.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6CE0A012.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6DA0A012.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\6DD0A012.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\7B70B9C6.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\8430842A.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\85C04040.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\8BC0C1A9.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\8E20A863.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\8F609ED7.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\8F909ED7.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\8FE07916.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\90505D31.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\90A0B807.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\90D0B807.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\9290C1E7.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\92C0C1E7.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\9380C1E7.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\96E0C1E7.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\9750DA76.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\97809225.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\9B3075EB.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\AD00B713.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\B0A0C186.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\B0F0CB59.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\B590AA7B.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\B790A6AA.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\BA30C186.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\BD80E8D5.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\C310B9F3.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\C9C0F036.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\CC10C869.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\CC40C869.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\D0D08F32.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\D2508F32.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\D4D0CE67.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\D9605006.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\DC70BEC3.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\E0A0E079.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\E0D0E079.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\E320BB7C.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\E3A0B18A.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\E5507A37.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\E9308929.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\EF80D790.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\EFC05011.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F160E078.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F200BC2F.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F2B0E078.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F2E0E078.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F310E078.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F460E078.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F490E078.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\F8E0B138.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\FA90B138.jpg" />
+    <Content Include="bin\Debug\Товарыавтосервиса\service_logo.ico" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Товарыавтосервиса\service_logo.ico" />
+    <Content Include="Товарыавтосервиса\FA90B138.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F490E078.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F460E078.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F310E078.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F200BC2F.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F160E078.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F8E0B138.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F2E0E078.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\F2B0E078.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\EFC05011.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\EF80D790.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\E9308929.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\E5507A37.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\E320BB7C.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\E3A0B18A.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\E0D0E079.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\E0A0E079.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\DC70BEC3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\D9605006.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\D2508F32.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\D4D0CE67.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\D0D08F32.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\CC40C869.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\CC10C869.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\C310B9F3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\C9C0F036.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\BD80E8D5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\BA30C186.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\B790A6AA.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\B590AA7B.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\B0F0CB59.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\B0A0C186.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\AD00B713.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\97809225.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\43909176.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\40409946.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\8430842A.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2390848B.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\90505D31.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\45908C52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\45008C52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\23106A35.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\022096CB.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\9750DA76.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\9380C1E7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\9290C1E7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6800BB8A.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6730A31C.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6080DCD5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\5250C855.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\5180B90E.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\3970E753.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\3760D73F.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\96E0C1E7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\92C0C1E7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\90D0B807.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\90A0B807.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\85C04040.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\0070C563.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\69C0CD62.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\63C09E91.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\59B0BE73.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\54B0795D.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\47E07CB5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\43E08C52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\43C09176.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\39D0C188.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\39A0C188.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\30E0C751.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\27B0C883.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\23F0848B.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\21B0E533.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\9B3075EB.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\8FE07916.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\8F909ED7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\8F609ED7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\8E20A863.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\8BC0C1A9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\7B70B9C6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6DD0A012.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6DA0A012.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6CE0A012.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\6CA0BE73.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\5BE0C351.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\5BB0C351.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\5A30A7EE.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\3DF0E4BC.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\3DA0B713.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\3B70C57C.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\03D096CB.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2E60E06C.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2E30E06C.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2E00E06C.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2D709062.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2B609062.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2B009062.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\2A109062.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\0DF0A8A4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\0D60A8A4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Товарыавтосервиса\0D30C4EE.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
